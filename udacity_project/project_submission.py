@@ -1,5 +1,5 @@
 import time
-import pandas as pd
+import Pandas as pd
 import numpy as np
 
 
@@ -7,6 +7,10 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv'}
+def continue_on():
+    proceed = input("\nto continue enter")
+    if proceed.lower() == '':
+        return
 
 def get_filters():
     """
@@ -169,9 +173,10 @@ def time_stats(df):
     common_month_day = df.groupby(['months', 'days']).size().nlargest(1)
     print("\nThe most frequent month and day to ride is \n{}".format(common_month_day))
 
-    proceed = input("\nto continue enter")
-    if proceed.lower() == 'yes':
-        return
+    #proceed = input("\nto continue enter")
+    #if proceed.lower() == 'yes':
+        #return
+    continue_on()
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -204,10 +209,10 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    proceed = input("\nto continue enter")
-    if proceed.lower() == 'yes':
-        return
-
+    #proceed = input("\nto continue enter")
+    #if proceed.lower() == 'yes':
+        #return
+    continue_on()
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -229,11 +234,12 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    proceed = input("\nto continue enter")
-    if proceed.lower() == 'yes':
-        return
-    elif proceed.lower() == 'y':
-        return
+    #proceed = input("\nto continue enter")
+    #if proceed.lower() == 'yes':
+        #return
+    #elif proceed.lower() == 'y':
+        #return
+    continue_on()
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -283,10 +289,10 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    proceed = input("\nto continue enter")
-    if proceed.lower() == 'yes':
-        return
-
+    #proceed = input("\nto continue enter")
+    #if proceed.lower() == 'yes':
+        #return
+    continue_on()
 
 
 def main():
