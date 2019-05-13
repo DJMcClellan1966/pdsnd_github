@@ -1,8 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-import os
-import matplotlib.pyplot as plt
+
 
 #dictionary where csv files can be accessed
 CITY_DATA = { 'chicago': 'chicago.csv',
